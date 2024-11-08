@@ -62,7 +62,7 @@ export default function App() {
 
         <Route>
           <Route path="/" element={<LandingPage/>} />
-          <Route path="/about" element={<h1>Product and Services</h1>} />
+          <Route path="/cookie-policy" element={<ErrorPage/>} />
           <Route path="*" element={<ErrorPage/>} />
 
         </Route>
