@@ -19,14 +19,13 @@ export default function App() {
   // Then run the code :- npm run dev
 
   // created date : 14-OCT-2024 || created by : Gurudas P R  || module : 1 ||
-  // modified date : 05/09/2024 || modified by : Gurudas P R  || module : 1 ||
-  // modified date : 24/09/2024 || modified by : Gurudas P R   || module : 1 ||
+  // modified date : -|| modified by : || module : 1 ||
+  // modified date : - || modified by :  || module : 1 ||
 
   // Technical summary(Pre-setups) created date/by :  Gurudas P R  ||
-  // Domain :   || 
-  // Hosting :   ||
-  // SSL :   ||
-  // Database :  ||
+  // Domain :   || https://enquiry.keraladrives.com/
+  // Hosting :   || vercel || 
+  // SSL :   || cloudflare ||
 
   // Phase summary :   || created date/by :  Gurudas P R   ||
   // Phase 1 :  SetUps ||
