@@ -4,8 +4,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import { FaFacebookF, FaInstagram, FaLinkedin, FaPinterest, FaWhatsapp, FaYoutube, FaGlobeAmericas, FaAsterisk } from 'react-icons/fa';
-import { FaLocationDot } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedin, FaPinterest, FaWhatsapp, FaYoutube, FaGlobeAmericas, FaAsterisk, FaMapPin } from 'react-icons/fa';
+import { FaLocationDot, FaMapLocationDot } from "react-icons/fa6";
 import { SiGooglemybusiness } from 'react-icons/si';
 import SocialMediaIcons from '../icons/SocialMediaIcons';
 import TooltipButton from '../tooltip/ToolTipButton';
@@ -68,20 +68,20 @@ const ContactForm = () => {
 
 
   const onSubmit = (data) => {
-      console.log(data)
+    console.log(data)
 
     const formattedFromDate = format(new Date(data.fromDate), 'dd MMM yyyy');
     const formattedToDate = format(new Date(data.toDate), 'dd MMM yyyy')
 
     // Create the WhatsApp message
     const whatsappMessage =
-    `🌟 *Booking Request* 🌟\n\n` +
-    `👤 *Name:* ${data.name}\n` +
-    `📞 *Phone:* +${phone}\n` +
-    `🌍 *Destination:* ${data.destination}\n` +
-    `👥 *Number of Persons:* ${data.numberOfPersons}\n` +
-    `📅 *Travel Dates:* ${formattedFromDate} to ${formattedToDate}\n` +
-    `📝 *Message:* ${data.message || 'No additional message'}\n\n`;
+      `🌟 *Booking Request* 🌟\n\n` +
+      `👤 *Name:* ${data.name}\n` +
+      `📞 *Phone:* +${phone}\n` +
+      `🌍 *Destination:* ${data.destination}\n` +
+      `👥 *Number of Persons:* ${data.numberOfPersons}\n` +
+      `📅 *Travel Dates:* ${formattedFromDate} to ${formattedToDate}\n` +
+      `📝 *Message:* ${data.message || 'No additional message'}\n\n`;
 
     // Create the WhatsApp URL
     const url = `https://api.whatsapp.com/send?phone=918086407979&text=${encodeURIComponent(whatsappMessage)}`;
@@ -208,8 +208,8 @@ const ContactForm = () => {
                   minDate={watch('fromDate') || today}
                   dateFormat="dd-MM-yyyy"
                   placeholderText="Select to date"
-                  className="mt-1 block  w-full border-stone-400 border outline-none text-stone-950 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                  wrapperClassName="w-full"
+                  className="mt-1 block  w-full border-stone-400 border outline-none text-stone-950 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500 "
+                  wrapperClassName="w-full "
                 />
               )}
             />
@@ -235,31 +235,43 @@ const ContactForm = () => {
 
         <div className='w-full flex justify-center'>
           <button
-            type="submit"
-            className="text-xl py-1 px-4 w-[170px] bg-[red] hover:px-2 transition-all duration-300 ease-in-out text-white font-semibold rounded-full outline-yellow-400 outline-1 border-2 border-black shadow-sm hover:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-opacity-50"
+            class="overflow-hidden relative w-32  h-10 my-2 bg-black text-white border-none rounded-md text-base font-bold cursor-pointer  z-10 group"
           >
-            Contact Us
+            Connect Us
+            <span
+              class="absolute w-36 h-32 -top-8 -left-2 bg-red-200 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-bottom"
+            ></span>
+            <span
+              class="absolute w-36 h-32 -top-8 -left-2 bg-red-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-bottom"
+            ></span>
+            <span
+              class="absolute w-36 h-32 -top-8 -left-2 bg-red-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-bottom"
+            ></span>
+            <span
+              class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-base  top-2 left-5 z-10"
+            >Connect Us</span>
           </button>
         </div>
-        <div className="w-full p-4">
+        <div className="w-full py-4">
           <div className="flex flex-wrap gap-2 justify-center items-center">
-            <div className="inline-flex items-center  px-4 py-2  bg-blue-500 text-white rounded-full text-xs sm:text-sm shadow-sm hover:bg-blue-600 transition-colors duration-300 cursor-default">
+            <FaLocationDot className='text-3xl text-red-600 ' />
+            <div className="inline-flex items-center  px-3  py-1  border-2 border-black  rounded-full text-xs shadow-sm  transition-colors duration-300 cursor-default">
               Trivandrum
             </div>
 
-            <div className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-full text-xs sm:text-sm shadow-sm hover:bg-blue-600 transition-colors duration-300 cursor-default">
+            <div className="inline-flex items-center px-3 py-1 border-2 border-black rounded-full text-xs shadow-sm  transition-colors duration-300 cursor-default">
               Kanyakumari
             </div>
 
-            <div className="inline-flex items-center px-4 py-2  bg-blue-500 text-white rounded-full text-xs sm:text-sm  shadow-sm hover:bg-blue-600 transition-colors duration-300 cursor-default">
+            <div className="inline-flex items-center px-3 py-1  border-2 border-black  rounded-full text-xs  shadow-sm  transition-colors duration-300 cursor-default">
               Kochi
             </div>
 
-            <div className="inline-flex items-center px-4 py-2  bg-blue-500 text-white rounded-full text-xs sm:text-sm shadow-sm hover:bg-blue-600 transition-colors duration-300 cursor-default">
+            <div className="items-center px-3 py-1 border-2 border-black  rounded-full text-xs shadow-sm  transition-colors duration-300 cursor-default">
               Wayanad
             </div>
 
-            <div className="inline-flex items-center px-4 py-2  bg-blue-500 text-white rounded-full text-xs sm:text-sm shadow-sm hover:bg-blue-600 transition-colors duration-300 cursor-default">
+            <div className="inline-flex items-center px-3  py-1  border-2 border-black rounded-full text-xs sm:text-sm shadow-sm transition-colors duration-300 cursor-default">
               UAE
             </div>
           </div>
