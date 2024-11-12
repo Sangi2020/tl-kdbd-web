@@ -271,7 +271,7 @@ const ContactForm = () => {
               Wayanad
             </div>
 
-            <div className="inline-flex items-center px-3  py-1  border-2 border-black rounded-full text-xs sm:text-sm shadow-sm transition-colors duration-300 cursor-default">
+            <div className="inline-flex items-center px-3  py-1  border-2 border-black rounded-full text-xs  shadow-sm transition-colors duration-300 cursor-default">
               UAE
             </div>
           </div>
