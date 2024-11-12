@@ -75,7 +75,7 @@ const ContactForm = () => {
 
     // Create the WhatsApp message
     const whatsappMessage =
-      `🌟 *Booking Request* 🌟\n\n` +
+      `🌟 *Trip Enquiry* 🌟\n\n` +
       `👤 *Name:* ${data.name}\n` +
       `📞 *Phone:* +${phone}\n` +
       `🌍 *Destination:* ${data.destination}\n` +
