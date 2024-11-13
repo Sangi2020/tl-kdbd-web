@@ -76,12 +76,12 @@ const ContactForm = () => {
     // Create the WhatsApp message
     const whatsappMessage =
       `🌟 *Trip Enquiry* 🌟\n\n` +
-      `👤 *Name:* ${data.name}\n` +
-      `📞 *Phone:* +${phone}\n` +
-      `🌍 *Destination:* ${data.destination}\n` +
-      `👥 *Number of Persons:* ${data.numberOfPersons}\n` +
-      `📅 *Travel Dates:* ${formattedFromDate} to ${formattedToDate}\n` +
-      `📝 *Message:* ${data.message || 'No additional message'}\n\n`;
+      `👤 *Name :* ${data.name}\n` +
+      `📞 *Phone :* +${phone}\n` +
+      `🌍 *Destination :* ${data.destination}\n` +
+      `👥 *Number of Travellers :* ${data.numberOfPersons}\n` +
+      `📅 *Travel Dates :* ${formattedFromDate} to ${formattedToDate}\n` +
+      `📝 *Message :* ${data.message || 'No additional message'}\n\n`;
 
     // Create the WhatsApp URL
     const url = `https://api.whatsapp.com/send?phone=918086407979&text=${encodeURIComponent(whatsappMessage)}`;
@@ -154,14 +154,14 @@ const ContactForm = () => {
           </div>
           <div>
             <label className="gap-1 flex items-center text-xs font-bold text-gray-700 ps-4">
-              <FaAsterisk className='text-red-500 text-sm pe-2' />Number of Persons
+              <FaAsterisk className='text-red-500 text-sm pe-2' />Number of Travellers
               <TooltipButton content={<p>Enter the number of people traveling.</p>} />
             </label>
             <input
               type="number"
               min={1}
               {...register('numberOfPersons')}
-              placeholder='Enter number of persons'
+              placeholder='Enter number of travellers'
               className="mt-1 block w-full border-stone-400 border outline-none text-stone-950 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
             {errors.numberOfPersons && <p className='text-red-500 ps-4 text-[10px]'>{errors.numberOfPersons.message}</p>}
