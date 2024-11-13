@@ -12,6 +12,8 @@ import TooltipButton from '../tooltip/ToolTipButton';
 import { format, startOfToday } from 'date-fns';
 import ReactDatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import mapIcon from '../../assets/mapIcon.svg';
+
 
 const schema = yup.object().shape({
   name: yup
@@ -254,7 +256,7 @@ const ContactForm = () => {
         </div>
         <div className="w-full py-4">
           <div className="flex flex-wrap gap-2 justify-center items-center">
-            <FaLocationDot className='text-3xl text-red-600 ' />
+          <img src={mapIcon} alt="map" className='    h-10 w-10'  />
             <div className="inline-flex items-center  px-3  py-1  border-2 border-black  rounded-full text-xs shadow-sm  transition-colors duration-300 cursor-default">
               Trivandrum
             </div>
