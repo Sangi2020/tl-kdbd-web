@@ -13,6 +13,7 @@ import { format, startOfToday } from 'date-fns';
 import ReactDatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import mapIcon from '../../assets/mapIcon.svg';
+import CustomAlert from '../alert/CustomAlert';
 
 
 const schema = yup.object().shape({
@@ -64,20 +65,20 @@ const ContactForm = () => {
   });
 
   const [phone, setPhone] = useState('');
+  const [showAlert, setShowAlert] = useState(false);
   const message = watch('message', '');
   const fromDate = watch('fromDate');
   const toDate = watch('toDate');
 
 
   const onSubmit = (data) => {
-    console.log(data)
+    setShowAlert(true); // Show alert on form submission
 
     const formattedFromDate = format(new Date(data.fromDate), 'dd MMM yyyy');
-    const formattedToDate = format(new Date(data.toDate), 'dd MMM yyyy')
+    const formattedToDate = format(new Date(data.toDate), 'dd MMM yyyy');
 
-    // Create the WhatsApp message
     const whatsappMessage =
-      `🌟 *Trip Enquiry* 🌟\n\n` +
+      `🌟 *Trip Enquiry* 🌟\n\n` +
       `👤 *Name :* ${data.name}\n` +
       `📞 *Phone :* +${phone}\n` +
       `🌍 *Destination :* ${data.destination}\n` +
@@ -85,15 +86,18 @@ const ContactForm = () => {
       `📅 *Travel Dates :* ${formattedFromDate} to ${formattedToDate}\n` +
       `📝 *Message :* ${data.message || 'No additional message'}\n\n`;
 
-    // Create the WhatsApp URL
     const url = `https://api.whatsapp.com/send?phone=918086407979&text=${encodeURIComponent(whatsappMessage)}`;
 
-    // Open WhatsApp in a new window
-    window.open(url, '_blank');
+    // Show alert for 2 seconds, then open WhatsApp
+    setTimeout(() => {
+      setShowAlert(false); // Hide alert
+      window.open(url, '_blank'); // Open WhatsApp
+    }, 2000);
   };
   const today = format(startOfToday(), 'yyyy-MM-dd');
   return (
     <div className="custom-scrollbar p-4 w-full h-full backdrop-blur-xl text-xs overflow-y-auto text-black bg-white">
+      {showAlert && <CustomAlert />}
       <form onSubmit={handleSubmit(onSubmit)} className="md:space-y-2 space-y-3 max-w-lg mx-auto flex flex-col justify-between h-full w-full">
         <h1 className='text-3xl font-bold space-y-2'>Plan Your Trip !</h1>
         <p className='md:text-sm text-[10px] text-black flex items-center'>Please fill out all required fields (<FaAsterisk className='text-red-500 text-[7px]' />) to ensure a smooth process.</p>
@@ -237,7 +241,7 @@ const ContactForm = () => {
 
         <div className='w-full flex justify-center'>
           <button
-            class="overflow-hidden relative w-32  h-10 my-2 bg-black text-white border-none rounded-md text-base font-bold cursor-pointer  z-10 group"
+            class="overflow-hidden relative w-32  h-10 my-2 bg-black text-white border-none rounded-md text-base font-bold cursor-pointer  group"
           >
             Connect Us
             <span
