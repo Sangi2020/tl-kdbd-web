@@ -255,7 +255,7 @@ const ContactForm = () => {
             ></span>
             <span
               class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-base  top-2 left-5 z-10"
-            >Connect Us</span>
+            >Lets Plan!</span>
           </button>
         </div>
         <div className="w-full py-4">
