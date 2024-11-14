@@ -19,7 +19,7 @@ function Navbar() {
             <img src={logo} alt="" className="h-16 w-16 rounded-full" />
           </div>
           <div className="md:text-[36px] text-xl font-bold text-white  drop-shadow-md">
-            KERALA DRIVES
+            KERALA&nbsp; DRIVES
           </div>
         </div>
       </div>

@@ -241,9 +241,9 @@ const ContactForm = () => {
 
         <div className='w-full flex justify-center'>
           <button
-            class="overflow-hidden relative w-32  h-10 my-2 bg-black text-white border-none rounded-md text-base font-bold cursor-pointer  group"
+            class="overflow-hidden relative w-32  h-10 mt-3 bg-black text-white border-none rounded-md text-base font-bold cursor-pointer  group"
           >
-            Connect Us
+            Lets Plan !
             <span
               class="absolute w-36 h-32 -top-8 -left-2 bg-red-200 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-bottom"
             ></span>
@@ -255,10 +255,10 @@ const ContactForm = () => {
             ></span>
             <span
               class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-base  top-2 left-5 z-10"
-            >Lets Plan!</span>
+            >Lets Plan !</span>
           </button>
         </div>
-        <div className="w-full py-4">
+        <div className="w-full py-2">
           <div className="flex flex-wrap gap-2 justify-center items-center">
           <img src={mapIcon} alt="map" className='    h-10 w-10'  />
             <div className="inline-flex items-center  px-3  py-1  border-2 border-black  rounded-full text-xs shadow-sm  transition-colors duration-300 cursor-default">
