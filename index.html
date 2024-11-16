@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kerala Drives Tours and Travels</title>
 
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"  />
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	<link rel="manifest" href="/site.webmanifest">
-
-
+  <!-- Favicon Links -->
+  <link rel="shortcut icon" href="https://enquiry.keraladrives.com/favicon.ico" type="image/x-icon" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://enquiry.keraladrives.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://enquiry.keraladrives.com/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="https://enquiry.keraladrives.com/apple-touch-icon.png">
+  <link rel="manifest" href="https://enquiry.keraladrives.com/site.webmanifest">
 
   <!-- SEO Meta Tags -->
   <meta name="description"
@@ -35,9 +35,7 @@
     content="Plan your next Kerala tour with Kerala Drives. From scenic trips to luxury stays, we offer customized itineraries for every traveler." />
   <meta name="twitter:image" content="https://enquiry.keraladrives.com/assets/Fun-Adventure-gilP1OX-.png" />
 
-  <title>Kerala Drives Tours and Travels</title>
-
-
+  <!-- Structured Data -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -69,19 +67,56 @@
         ]
       }
     }
-    </script>
-  <!-- Google tag (gtag.js) -->
+  </script>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXS495JD2X"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-LXS495JD2X');
   </script>
+
+  <!-- CSS for Responsiveness -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem;
+      background-color: #007bff;
+      color: white;
+    }
+
+    .content {
+      padding: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.2rem;
+      }
+
+      .content {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <h1>Welcome to Kerala Drives Tours and Travels</h1>
+  </header>
+  <div class="content">
+    <p>Explore the scenic beauty, culture, and adventure of Kerala with personalized itineraries. Contact us for more
+      details!</p>
+  </div>
   <div id="root"></div>
   <div id="cookie-consent-portal"></div>
   <script type="module" src="/src/main.jsx"></script>
