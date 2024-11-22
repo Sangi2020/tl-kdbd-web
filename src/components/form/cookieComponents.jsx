@@ -39,34 +39,78 @@ const CookieConsent = () => {
           >
             <IoClose className="h-6 w-6 text-gray-500 hover:text-gray-700" />
           </button>
-          <h2 className="text-2xl font-bold pr-8">Cookie Policy</h2>
+          <h2 className=" text-2xl font-bold pr-8">Cookie Policy for Kerala Drives </h2>
         </div>
 
         {/* Content Section - Scrollable */}
         <div className="p-6 overflow-y-auto flex-grow">
           <div className="prose max-w-none">
-            <h3 className="text-xl font-semibold mb-2">What are cookies?</h3>
             <p className="mb-4">
-              Cookies are small text files that are placed on your computer or mobile device when you visit our website.
+              Welcome to Kerala Drives! This Cookie Policy explains how we use cookies and similar technologies on our website <a href="https://www.keraladrives.com" target='blank'>(keraladrives.com)</a> to enhance your experience and ensure smooth operation of our services.
             </p>
 
-            <h3 className="text-xl font-semibold mb-2">How we use cookies</h3>
-            <p className="mb-2">We use cookies for the following purposes:</p>
+            <h3 className="text-xl font-semibold mb-2">What Are Cookies?</h3>
+            <p className="mb-4">
+              Cookies are small text files placed on your device when you visit our website. They help us understand how you interact with our website, improve your browsing experience, and provide relevant content.
+            </p>
+
+            <h3 className="text-xl font-semibold mb-2">Types of Cookies We Use</h3>
+            <ol className="list-decimal pl-6 mb-4">
+              <li>
+                <strong>Essential Cookies</strong>
+                <p>These cookies are necessary for the proper functioning of our website, enabling you to navigate and use its features.</p>
+              </li>
+              <li>
+                <strong>Performance Cookies</strong>
+                <p>These cookies collect information about how visitors use our website, such as which pages are visited most often, helping us improve site performance.</p>
+              </li>
+              <li>
+                <strong>Functional Cookies</strong>
+                <p>These cookies allow us to provide enhanced functionality, such as remembering your preferences and settings.</p>
+              </li>
+              <li>
+                <strong>Advertising and Analytics Cookies</strong>
+                <p>We use these cookies to deliver relevant advertisements and analyze user behavior to improve our services.</p>
+              </li>
+            </ol>
+
+            <h3 className="text-xl font-semibold mb-2">How We Use Cookies</h3>
             <ul className="list-disc pl-6 mb-4">
-              <li>Essential cookies: Required for the website to function properly</li>
-              <li>Analytics cookies: Help us understand how visitors use our website</li>
-              <li>Preference cookies: Remember your settings and preferences</li>
-              <li>Marketing cookies: Used to deliver relevant advertisements</li>
+              <li>To provide seamless booking and enquiry processes for our services (e.g., tour packages, transportation options, and guided tours).</li>
+              <li>To analyze traffic on our website and improve navigation for customers exploring our offerings such as luxury bus rentals, adventure activities, and eco-tourism.</li>
+              <li>To remember user preferences and enhance your browsing experience.</li>
             </ul>
 
-            <h3 className="text-xl font-semibold mb-2">Your choices</h3>
+            <h3 className="text-xl font-semibold mb-2">Managing Cookies</h3>
             <p className="mb-4">
-              You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed.
+              You can manage or disable cookies in your browser settings. However, please note that some features of our website may not function properly without cookies.
             </p>
 
-            <h3 className="text-xl font-semibold mb-2">Contact us</h3>
+            <h3 className="text-xl font-semibold mb-2">Third-Party Cookies</h3>
             <p className="mb-4">
-              If you have any questions about our use of cookies, please contact us.
+              We may use third-party services (e.g., Google Analytics) to analyze website usage and enhance our marketing efforts. These providers may also place cookies on your device.
+            </p>
+
+            <h3 className="text-xl font-semibold mb-2">Updates to This Policy</h3>
+            <p className="mb-4">
+              Kerala Drives reserves the right to update this Cookie Policy periodically. Changes will be reflected on this page, so please check back regularly.
+            </p>
+
+            <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
+            <p className="mb-4">
+              If you have any questions about our Cookie Policy or how we use cookies, feel free to reach out:
+              <br />
+              Phone: +91 8086407979
+              <br />
+              Email: info@keraladrives.com
+              <br />
+              Website: keraladrives.com
+            </p>
+
+            <p className="italic">
+              By continuing to use our website, you consent to our use of cookies as outlined in this policy.
+              <br />
+              "Discover, Relax, and Adventure with Us!" 🌟
             </p>
           </div>
         </div>
