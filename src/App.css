@@ -90,3 +90,16 @@ label{
   transform: translate(-50%, -50%);
   z-index: 9999; /* Ensure it stays above other content */
 }
+
+
+
+
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  color: #e7e5e4;  
+}
+.custom-select ::placeholder{
+  color: #e7e5e4; 
+}
