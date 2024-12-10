@@ -12,6 +12,7 @@ const Slider = () => {
   const [isBrochureVisible, setIsBrochureVisible] = useState(false);
   const [selectedDocument, setSelectedDocument] = useState(null);
   const [completedRotations, setCompletedRotations] = useState(0);
+  const [isHovered, setIsHovered] = useState(false); // State to track hover status
 
   // Helper function to get current image
   const getCurrentImage = () => {
@@ -24,6 +25,7 @@ const Slider = () => {
 
   // Handle service rotation and track completed rotations
   useEffect(() => {
+    if (isHovered) return; // Skip rotation when hovered
     const serviceInterval = setInterval(() => {
       setCurrentServiceIndex((prevIndex) => {
         const nextIndex = (prevIndex + 1) % services.length;
@@ -36,7 +38,7 @@ const Slider = () => {
     }, 5000);
 
     return () => clearInterval(serviceInterval);
-  }, []);
+  }, [isHovered]); // Effect depends on isHovered
 
   // Handle image rotation only after completing a full service rotation
   useEffect(() => {
@@ -74,7 +76,11 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative w-full h-full overflow-x-hidden">
+    <div
+      className="relative w-full h-full overflow-x-hidden"
+      onMouseEnter={() => setIsHovered(true)} // Set hover to true on mouse enter
+      onMouseLeave={() => setIsHovered(false)} // Set hover to false on mouse leave
+    >
       <div className="absolute top-[-7px] bg-white rounded-lg right-0 z-40">
         {isLastService ? (
           <motion.img
