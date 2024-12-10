@@ -315,6 +315,7 @@ const ContactForm = () => {
 
           <select
             name="services"
+            value={selectedServices.length > 0 ? selectedServices[selectedServices.length - 1] : ""}
             onChange={handleServiceChange}
             className="mt-1 custom-select block w-full border-stone-400 border outline-none text-gray-700 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500"
           >
