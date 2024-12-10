@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-
-import { services } from '../../constants/datas'
+import { services } from '../../constants/datas';
 import servicetag from '../../img/tag.png';
 import { IoCloseCircle } from 'react-icons/io5';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'; // Import arrow icons
 
 const Slider = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -62,6 +62,15 @@ const Slider = () => {
       );
     }
     return heading;
+  };
+
+  // Functions to manually change the slide
+  const handleNext = () => {
+    setCurrentServiceIndex((prevIndex) => (prevIndex + 1) % services.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentServiceIndex((prevIndex) => (prevIndex - 1 + services.length) % services.length);
   };
 
   return (
@@ -128,7 +137,6 @@ const Slider = () => {
         />
       )}
 
-
       <div className="absolute inset-0 flex flex-col md:gap-4 gap-2 items-start justify-end text-start text-white p-4">
         <motion.h2
           key={`heading-${currentServiceIndex}`}
@@ -189,6 +197,24 @@ const Slider = () => {
         </div>
       </div>
 
+      {/* Arrow Buttons for Manual Navigation */}
+      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 z-50">
+        <button
+          onClick={handlePrev}
+          className="bg-white p-2 rounded-full shadow-lg text-white backdrop-blur-sm bg-opacity-10"
+        >
+          <IoIosArrowBack size={24} />
+        </button>
+      </div>
+
+      <div className="absolute top-1/2 right-0 transform -translate-y-1/2 z-50">
+        <button
+          onClick={handleNext}
+          className="bg-white p-2 rounded-full shadow-lg text-white backdrop-blur-sm bg-opacity-10"
+        >
+          <IoIosArrowForward size={24} />
+        </button>
+      </div>
     </div>
   );
 };
