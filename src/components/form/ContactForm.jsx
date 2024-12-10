@@ -122,6 +122,10 @@ const ContactForm = () => {
   const removeService = (service) => {
     setSelectedServices(selectedServices.filter(item => item !== service));
   };
+  const handleClearAll = () => {
+    setSelectedServices([]);
+    setValue('preferredServices', []);
+  };
 
   const [phone, setPhone] = useState('');
   const [showAlert, setShowAlert] = useState(false);
@@ -299,7 +303,7 @@ const ContactForm = () => {
               </span>
               {selectedServices.length > 0 && (
                 <button
-                  onClick={() => setSelectedServices([])}
+                  onClick={handleClearAll}
                   type="button"
                   className="bg-black px-3 p-1 rounded-full text-white hover:bg-slate-700 transition-all"
                 >
@@ -314,7 +318,7 @@ const ContactForm = () => {
             onChange={handleServiceChange}
             className="mt-1 custom-select block w-full border-stone-400 border outline-none text-gray-700 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500"
           >
-            <option value="">Select a service</option>
+            <option  value="">Select a service</option>
             {servicesOptions.map((service, index) => (
               <option
                 key={index}
