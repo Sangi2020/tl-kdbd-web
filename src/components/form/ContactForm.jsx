@@ -421,9 +421,9 @@ const ContactForm = () => {
           <span>follow us</span>
           <SocialMediaIcons
             icon={
-              <FaWhatsapp className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-green-500" />
+              <FaLinkedin className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-blue-600" />
             }
-            link={"https://api.whatsapp.com/send/?phone=%2B918086407979&text=Hello%2C+I+am+interested+to+know+more+about+your+service.&type=phone_number&app_absent=0"}
+            link={"https://www.linkedin.com/company/kerala-drives/"}
           />
           <SocialMediaIcons
             icon={
@@ -470,11 +470,12 @@ const ContactForm = () => {
             }
             link={"https://www.pinterest.com/keraladrives195/"}
           />
+          
           <SocialMediaIcons
             icon={
-              <FaLinkedin className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-blue-600" />
+              <FaWhatsapp className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-green-500" />
             }
-            link={"https://www.linkedin.com/company/kerala-drives/"}
+            link={"https://api.whatsapp.com/send/?phone=%2B918086407979&text=Hello%2C+I+am+interested+to+know+more+about+your+service.&type=phone_number&app_absent=0"}
           />
 
 
