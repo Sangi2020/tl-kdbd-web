@@ -60,18 +60,44 @@ const schema = yup.object().shape({
   message: yup.string().optional(),
 });
 const ContactForm = () => {
-   const { register, control, handleSubmit, formState: { errors }, watch, setValue } = useForm({
+  const { register, control, handleSubmit, formState: { errors }, watch, setValue } = useForm({
     resolver: yupResolver(schema),
   });
 
   const [selectedServices, setSelectedServices] = useState([]);
   const servicesOptions = [
-    "Adventure",
-    "Relax & Recharge",
-    "Feast on Flavor",
-    "Luxury Travel",
-    "Tailored Journeys",
-    "Comfort & Convenience"
+    {
+      title: "Adventure Trips",
+      description: "Thrilling experiences for the daring explorer",
+    },
+    {
+      title: "Ayurvedic Massage Packages",
+      description: "Rejuvenate your body and soul with holistic healing",
+    },
+    {
+      title: "Car & Bus Services",
+      description: "Comfortable and reliable transport for every journey",
+    },
+    {
+      title: "Honeymoon Packages",
+      description: "Celebrate love with romantic getaways",
+    },
+    {
+      title: "Weekend Getaway Trips",
+      description: "Perfect escapes to recharge and unwind",
+    },
+    {
+      title: "Group Trips",
+      description: "Memorable journeys for friends, families, or organizations",
+    },
+    {
+      title: "Church & Temple Holy Trips",
+      description: "Spiritual journeys to sacred destinations",
+    },
+    {
+      title: "College & Institution Trips",
+      description: "Educational and fun-filled excursions for students",
+    },
   ];
 
   // Function to handle service selection
@@ -104,7 +130,7 @@ const ContactForm = () => {
   const toDate = watch('toDate');
 
   const onSubmit = (data) => {
-    setShowAlert(true); 
+    setShowAlert(true);
 
     const formattedFromDate = format(new Date(data.fromDate), 'dd MMM yyyy');
     const formattedToDate = format(new Date(data.toDate), 'dd MMM yyyy');
@@ -121,10 +147,9 @@ const ContactForm = () => {
 
     const url = `https://api.whatsapp.com/send?phone=918086407979&text=${encodeURIComponent(whatsappMessage)}`;
 
-    // Show alert for 2 seconds, then open WhatsApp
     setTimeout(() => {
-      setShowAlert(false); // Hide alert
-      window.open(url, '_blank'); // Open WhatsApp
+      setShowAlert(false);
+      window.open(url, '_blank');
     }, 2000);
   };
   const today = format(startOfToday(), 'yyyy-MM-dd');
@@ -289,15 +314,15 @@ const ContactForm = () => {
             onChange={handleServiceChange}
             className="mt-1 custom-select block w-full border-stone-400 border outline-none text-gray-700 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500"
           >
-            <option  value="">Select a service</option>
-            {servicesOptions.sort().map((service, index) => (
+            <option value="">Select a service</option>
+            {servicesOptions.map((service, index) => (
               <option
                 key={index}
-                value={service}
-                className={selectedServices.includes(service) ? "bg-gray-400 text-gray-700 " : ""}
-                disabled={selectedServices.includes(service)}
+                value={service.title}
+                className={selectedServices.includes(service.title) ? "bg-gray-400 text-gray-700" : ""}
+                disabled={selectedServices.includes(service.title)}
               >
-                {service}
+                {service.title}: {service.description}
               </option>
             ))}
           </select>
