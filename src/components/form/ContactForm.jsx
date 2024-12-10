@@ -419,12 +419,12 @@ const ContactForm = () => {
 
         <div className="flex justify-evenly items-center w-full flex-wrap text-black  ">
           <span>follow us</span>
-          <SocialMediaIcons
+          {/* <SocialMediaIcons
             icon={
               <FaLinkedin className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-blue-600" />
             }
             link={"https://www.linkedin.com/company/kerala-drives/"}
-          />
+          /> */}
           <SocialMediaIcons
             icon={
               <FaGlobeAmericas
@@ -464,12 +464,12 @@ const ContactForm = () => {
             }
             link={"https://www.youtube.com/channel/UC3tmfmBZf5Ufqo2JSEwj6BA?sub_confirmation=1"}
           />
-          <SocialMediaIcons
+          {/* <SocialMediaIcons
             icon={
               <FaPinterest className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-red-600" />
             }
             link={"https://www.pinterest.com/keraladrives195/"}
-          />
+          /> */}
           
           <SocialMediaIcons
             icon={
