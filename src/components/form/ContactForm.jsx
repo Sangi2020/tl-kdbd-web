@@ -464,19 +464,19 @@ const ContactForm = () => {
             }
             link={"https://www.youtube.com/channel/UC3tmfmBZf5Ufqo2JSEwj6BA?sub_confirmation=1"}
           />
-          {/* <SocialMediaIcons
+          <SocialMediaIcons
             icon={
               <FaPinterest className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-red-600" />
             }
             link={"https://www.pinterest.com/keraladrives195/"}
-          /> */}
+          />
           
-          <SocialMediaIcons
+          {/* <SocialMediaIcons
             icon={
               <FaWhatsapp className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-green-500" />
             }
             link={"https://api.whatsapp.com/send/?phone=%2B918086407979&text=Hello%2C+I+am+interested+to+know+more+about+your+service.&type=phone_number&app_absent=0"}
-          />
+          /> */}
 
 
 
