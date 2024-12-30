@@ -25,9 +25,9 @@ function Navbar() {
       </div>
       <div className={`md:hidden  absolute top-0 right-0 z-50 w-full bg-stone-950 flex flex-col text-bl items-center transition-transform duration-300 ease-in-out ${menuOpen ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
         <SocialMediaIcons  link={"https://www.keraladrives.com"} title={<span className='text-white'>HOME</span>} />
-        <SocialMediaIcons link={"https://www.keraladrives.com/getaway-tours.html"} title={<span className='text-white'>TOUR PACKAGES</span>} />
-        <SocialMediaIcons link={"https://www.keraladrives.com/about-us.html"} title={<span className='text-white'>ABOUT</span>} />
-        <SocialMediaIcons link={"https://www.keraladrives.com/gallery.html"} title={<span className='text-white'>GALLERY</span>} />
+        <SocialMediaIcons link={"https://www.keraladrives.com/about"} title={<span className='text-white'>ABOUT</span>} />
+        <SocialMediaIcons link={"https://www.keraladrives.com/destination"} title={<span className='text-white'>DESTINATIONS</span>} />
+        <SocialMediaIcons link={"https://www.keraladrives.com/gallery"} title={<span className='text-white'>GALLERY</span>} />
       </div>
       {/* <div className="md:flex sm:hidden hidden gap-3 z-50 text-[18px] items-end h-fit flex-wrap text-stone-950 text-opacity-90 justify-start rounded-lg">
       <SocialMediaIcons  link={"http://sangitl2020-001-site7.atempurl.com/index.html"} title={<span className='text-white'>HOME</span>} />
